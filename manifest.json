@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "description": "Your tabs have been served.",
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "action": {
     "default_popup": "popup.html"

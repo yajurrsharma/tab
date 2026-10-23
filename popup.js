@@ -80,7 +80,7 @@ async function countTabs() {
 //       "min-w-0 flex-1 border border-red-500 bg-red-500 p-2 font-mono text-xs font-bold text-white cursor-pointer transition-colors duration-150 hover:bg-red-700 hover:border-red-700";
 //
 //     const pardonBtn = document.createElement("button");
-//     pardonBtn.textContent = "PARDON";
+//     pardonBtn.textContent = "IMMUNITY";
 //     pardonBtn.className =
 //       "min-w-0 flex-1 border border-red-500 bg-black p-2 font-mono text-xs font-bold text-red-500 cursor-pointer transition-colors duration-150 hover:bg-red-500 hover:text-white";
 //
@@ -190,7 +190,7 @@ function formatDur(ms) {
 //       "min-w-0 flex-1 border border-red-500 bg-red-500 p-2 font-mono text-xs font-bold text-white cursor-pointer transition-colors duration-150 hover:bg-red-700 hover:border-red-700";
 //
 //     const pardonBtn = document.createElement("button");
-//     pardonBtn.textContent = "PARDON";
+//     pardonBtn.textContent = "IMMUNITY";
 //     pardonBtn.className =
 //       "min-w-0 flex-1 border border-red-500 bg-black p-2 font-mono text-xs font-bold text-red-500 cursor-pointer transition-colors duration-150 hover:bg-red-500 hover:text-white";
 //
@@ -237,7 +237,7 @@ async function renderPardonRegistry() {
   if (pardonedTabs.length === 0) {
     const empty = document.createElement("p");
     empty.className = "font-mono text-xs text-neutral-400";
-    empty.textContent = "NO ACTIVE PARDONS.";
+    empty.textContent = "NO ACTIVE IMMUNITY.";
     results.append(empty);
 
     return;
@@ -256,7 +256,7 @@ async function renderPardonRegistry() {
     url.textContent = tab.url || "Unknown URL";
 
     const revokeBtn = document.createElement("button");
-    revokeBtn.textContent = "REVOKE PARDON";
+    revokeBtn.textContent = "REVOKE IMMUNITY";
     revokeBtn.className = "mt-4 w-full border border-red-500 bg-black p-2 font-mono text-xs font-bold text-red-500 cursor-pointer transition-colors duration-150 hover:bg-red-500 hover:text-white";
 
     revokeBtn.addEventListener("click", async () => {
@@ -300,7 +300,7 @@ async function getSuspects() {
   const suspect = [];
 
   const now = Date.now();
-  const thresh = 5000;
+  const thresh = 60 * 60 * 1000;
 
   for (const tab of tabs) {
     if (pardoned.has(tab.id)) continue;
@@ -384,7 +384,7 @@ function renderSuspect() {
 
   const question = document.createElement("p");
   question.className = "mt-4 font-mono text-xs text-white";
-  question.textContent = "WHAT IS THE COURT'S VERDICT?";
+  question.textContent = "VERDICT?";
 
   const buttons = document.createElement("div");
   buttons.className = "mt-4 flex gap-2";
@@ -398,7 +398,7 @@ function renderSuspect() {
     closeBtn.className = "min-w-0 flex-1 border border-red-500 bg-red-500 p-2 font-mono text-xs font-bold text-white cursor-pointer transition-colors duration-150 hover:bg-red-700 hover:border-red-700";
 
     const pardonBtn = document.createElement("button");
-    pardonBtn.textContent = "PARDON";
+    pardonBtn.textContent = "GIVE IMMUNITY";
     pardonBtn.className = "min-w-0 flex-1 border border-red-500 bg-black p-2 font-mono text-xs font-bold text-red-500 cursor-pointer transition-colors duration-150 hover:bg-red-500 hover:text-white";
 
     keepBtn.addEventListener("click", () => {
@@ -414,7 +414,7 @@ function renderSuspect() {
           caseIndex++;
           renderSuspect();
         } catch (error) {
-          console.error("Failed to close tab:", error);
+          console.error("failed:", error);
         }
       });
 
@@ -426,7 +426,7 @@ function renderSuspect() {
           caseIndex++;
           renderSuspect();
         } catch (error) {
-          console.error("Failed to pardon tab:", error);
+          console.error("failed:", error);
         }
       });
 

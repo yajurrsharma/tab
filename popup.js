@@ -378,7 +378,7 @@ function renderSuspect() {
   for (const charge of tab.charges) {
     const item = document.createElement("p");
     item.className = "mt-1 font-mono text-xs text-white";
-    item.textContent = `- ${charge}`;
+    item.textContent = `${charge}`;
     charges.append(item);
   }
 

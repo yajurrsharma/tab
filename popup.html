@@ -6,7 +6,7 @@
 	<title>Serve Up</title>
 	<link rel="stylesheet" href="popup.css">
 </head>
-<body class="w-95 min-h-120 bg-black bg-[url('./pattern.svg')] bg-repeat bg-size-[80px_80px] text-white">
+<body class="w-95 min-h-90 bg-black bg-[url('./pattern.svg')] bg-repeat bg-size-[80px_80px] text-white">
 
     <main class="p-5">
         <section class="border border-neutral-700 bg-black p-5 text-center">
@@ -35,15 +35,28 @@
         </p>
 
         <button id="begin-trial" class="mt-6 w-full border border-white bg-white px-4 py-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-black cursor-pointer transition-colors hover:border-red-500 hover:bg-red-500 hover:text-white">
-            BEGIN TRIAL
+            SUMMON A TAB
         </button>
 
         </section>
 
-        <section id="trial-results" class="mt-4 hidden border border-neutral-700 bg-black p-5">
+        <!--<section id="trial-results" class="mt-4 hidden border border-neutral-700 bg-black p-5">
         </section>
         <section id="stale-results" class="mt-4 hidden border border-neutral-700 bg-black p-5">
+        </section>-->
+
+        <section id="suspect-court" class="mt-4 hidden border border-neutral-700 bg-black p-5">
+
+            <div class="mb-4 flex items-center justify-between">
+                <h2 class="font-mono text-sm font-bold text-red-500">
+                    DEFENDANT
+                </h2>
+                <span id="case-number" class="font-mono text-xs text-neutral-400"></span>
+            </div>
+            <div id="suspect-details"></div>
         </section>
+
+
         <section id="pardon-registry" class="mt-4 hidden border border-neutral-700 bg-black p-5">
             <h2 class="mb-4 font-mono text-sm font-bold text-red-500">
                 PARDONED RECORDS

@@ -9,7 +9,7 @@ i was playing ace attorney (great game btw) the other day, and i figured i could
 this is a chrome extension, and not your typical app/webpage. to install and enable it, follow these steps:
 
  1) download the release, extract it into a folder.
- 2) open chrome, click on the `Extensions` tab on the top right. if its not visible, go to settings -> extensions.
+ 2) open chrome, click on the `Extensions` tab on the top right. if its not visible, go to `Settings` -> `Extensions`.
  3) click on manage extensions
  4) on the top right, enable `Developer Mode`
  5) click on `Load Unpacked` and select the extracted folder. NOT the files, the folder which was extracted.

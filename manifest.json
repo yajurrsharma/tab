@@ -1,0 +1,13 @@
+{
+  "manifest_version":3,
+  "name": "Serve Up",
+  "version": "0.1.0",
+  "description": "Your tabs have been served.",
+  "permissions": [
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+
+}

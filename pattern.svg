@@ -1,0 +1,26 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <g fill="none" stroke-width="2.5" stroke-linecap="square">
+
+    <g stroke="#777" transform="translate(40 40) rotate(-35) scale(0.8)">
+      <rect x="-15" y="-8" width="30" height="16"/>
+      <path d="M-18 -12V12 M18 -12V12 M0 8V35 M-15 37H15"/>
+    </g>
+
+    <g stroke="#333" transform="translate(120 40) scale(0.8)">
+      <path d="M0 -23V27 M-27 -15H27 M-27 -15L-36 5H-18Z M27 -15L18 5H36Z M-16 27H16"/>
+      <circle cx="0" cy="-23" r="3"/>
+    </g>
+
+    <g stroke="#333" transform="translate(40 120) rotate(-35) scale(0.8)">
+      <rect x="-15" y="-8" width="30" height="16"/>
+      <path d="M-18 -12V12 M18 -12V12 M0 8V35 M-15 37H15"/>
+    </g>
+
+    <g stroke="#777" transform="translate(120 120) scale(0.8)">
+      <path d="M0 -23V27 M-27 -15H27 M-27 -15L-36 5H-18Z M27 -15L18 5H36Z M-16 27H16"/>
+      <circle cx="0" cy="-23" r="3"/>
+    </g>
+
+  </g>
+</svg>
